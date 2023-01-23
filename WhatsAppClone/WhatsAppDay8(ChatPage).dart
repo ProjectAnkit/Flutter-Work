@@ -72,43 +72,33 @@ class _NewPageState extends State<NewPage> {
         child: Stack(
           children: [
             ListView(),
+            // ignore: prefer_const_constructors
             Align(
               alignment: Alignment.bottomCenter,
               child: Row(
                 children: [
                   Container(
                     width: MediaQuery.of(context).size.width-55,
-                    child: Card(  
-                      margin: EdgeInsets.only(left: 2,right: 2,bottom: 8),                   
-                      shape: RoundedRectangleBorder(borderRadius: BorderRadius.circular(45)),   
-                      child: TextField(
-                        maxLines: 5,
-                        minLines: 1,
-                        textAlignVertical: TextAlignVertical.center,
+                    child: Card(
+                      margin: EdgeInsets.only(left: 4,right: 2,bottom: 8),
+                      shape: RoundedRectangleBorder(borderRadius: BorderRadius.circular(45)),
+                      child: TextFormField(     
+                        keyboardType: TextInputType.multiline,
+                        cursorColor: Colors.black,
+                        // ignore: prefer_const_constructors
                         decoration: InputDecoration(
-                          contentPadding: EdgeInsets.all(5),
                           border: InputBorder.none,
-                          hintText: "Type a message",
-                          prefixIcon:IconButton(icon: Icon(Icons.emoji_emotions),onPressed: () {},),
-                          prefixIconColor: Colors.grey,
-                          suffixIcon: Row(
-                            mainAxisAlignment: MainAxisAlignment.end,
-                            children: [
-                             IconButton(onPressed: (){}, icon: Icon(Icons.attachment_outlined)),
-                             IconButton(onPressed: (){}, icon: Icon(Icons.currency_rupee_sharp)),
-                             IconButton(onPressed: (){}, icon: Icon(Icons.camera_alt_rounded)),
-                            ],
-                          ),
-                          suffixIconColor: Colors.grey,
-                          ),
-                      )),
+                          contentPadding: EdgeInsets.all(5),
+                          hintText: "Type a Message", 
+                        ),              
+                      ),         
+                    ),
                   ),
                 ],
               ),
             )
-          ],
-        ),
-      ),
+          ]),
+      )
 
     );
   }
