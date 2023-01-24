@@ -80,18 +80,42 @@ class _NewPageState extends State<NewPage> {
                   Container(
                     width: MediaQuery.of(context).size.width-55,
                     child: Card(
-                      margin: EdgeInsets.only(left: 4,right: 2,bottom: 8),
+                      margin: const EdgeInsets.only(left: 4,right: 2,bottom: 8),
                       shape: RoundedRectangleBorder(borderRadius: BorderRadius.circular(45)),
-                      child: TextFormField(     
+                      child: TextFormField(  
+                        textAlignVertical: TextAlignVertical.center, 
+                        maxLines: 5,
+                        minLines: 1,  
                         keyboardType: TextInputType.multiline,
                         cursorColor: Colors.black,
                         // ignore: prefer_const_constructors
                         decoration: InputDecoration(
+                          prefixIcon: const IconButton(onPressed: null, icon: Icon(Icons.emoji_emotions_outlined)),
                           border: InputBorder.none,
-                          contentPadding: EdgeInsets.all(5),
+                          contentPadding:const EdgeInsets.all(5),
                           hintText: "Type a Message", 
+                          suffixIcon: Row(
+                            mainAxisSize: MainAxisSize.min,
+                            // ignore: prefer_const_literals_to_create_immutables
+                            children: [
+                              const IconButton(onPressed: null, icon: Icon(Icons.attach_file)),
+                              const IconButton(onPressed: null, icon: Icon(Icons.camera_alt_rounded)),
+                            ],
+                          ),
                         ),              
                       ),         
+                    ),
+                  ),
+                  const SizedBox(
+                    width: 3,
+                  ),
+                  // ignore: prefer_const_constructors
+                  Padding(
+                    padding: const EdgeInsets.only(right: 2,bottom: 8),
+                    child: const CircleAvatar(
+                      radius: 25,
+                      backgroundColor: Color.fromARGB(178, 2, 133, 89),
+                      child: Center(child: Icon(Icons.mic,color: Colors.white,)),
                     ),
                   ),
                 ],
