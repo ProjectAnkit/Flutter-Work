@@ -1,3 +1,5 @@
+//ItemPage
+
 import 'package:flutter/material.dart';
 import 'package:google_fonts/google_fonts.dart';
 import 'ShoppingModel.dart';
@@ -143,7 +145,9 @@ class ItemPage extends StatelessWidget {
                         ],
                       ),
                       
-                      Expanded(child: Image.asset(shop.simage,scale: 5.0,)),
+                      Expanded(child: Hero(
+                        tag: shop.id,
+                        child: Image.asset(shop.simage,scale: 5.0,))),
                      ],
                    ),
               ],
@@ -151,6 +155,17 @@ class ItemPage extends StatelessWidget {
           ),
         ],
       )
+    );
+  }
+
+
+  Widget BuyButton(){
+    return  Row(
+      children: [
+        TextButton(onPressed: (){}, child: Text("Add to cart",style: GoogleFonts.jost(color: Colors.black,fontSize: 25),)),
+        SizedBox(width: 50,),
+        ElevatedButton(onPressed: (){}, child: Text("Buy Now",style: GoogleFonts.jost(color: Colors.white,fontSize: 25),),style: ElevatedButton.styleFrom(backgroundColor: shop.scolor),)
+      ],
     );
   }
 }
@@ -201,17 +216,3 @@ class _CartCounterState extends State<CartCounter> {
   }
 }
 
-class BuyButton extends StatelessWidget {
-  const BuyButton({super.key});
-
-  @override
-  Widget build(BuildContext context) {
-    return Row(
-      children: [
-        TextButton(onPressed: (){}, child: Text("Add to cart",style: GoogleFonts.jost(color: Colors.black,fontSize: 25),)),
-        SizedBox(width: 50,),
-        ElevatedButton(onPressed: (){}, child: Text("Buy Now",style: GoogleFonts.jost(color: Colors.white,fontSize: 25),),style: ElevatedButton.styleFrom(backgroundColor:  ),)
-      ],
-    );
-  }
-}
