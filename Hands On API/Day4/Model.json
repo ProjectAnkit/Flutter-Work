@@ -1,0 +1,99 @@
+{
+    "success": true,
+    "message": "All Shops Data",
+    "data": [
+        {
+            "_id": "6196377900622d794418644b",
+            "is_active": false,
+            "created_at": "2021-11-18T09:03:04.356Z",
+            "name": "ONE",
+            "description": "Clothing store in Islamabad",
+            "shopemail": "ONE@gmail.com",
+            "shopaddress": "islamabad",
+            "shopcity": "Islamabad",
+            "userid": "6196377800622d7944186447",
+            "image": "https://cdn-images-1.medium.com/max/1600/1*cJUVJJSWPj9WFIJlvf7dKg.jpeg",
+            "__v": 0,
+            "products": [
+                {
+                    "_id": "61963b4300622d794418687e",
+                    "on_sale": true,
+                    "sale_percent": 0,
+                    "sold": 10,
+                    "slider_new": false,
+                    "slider_recent": false,
+                    "slider_sold": false,
+                    "date": "2021-11-18T09:03:04.358Z",
+                    "title": "Denim Shirt Grey",
+                    "categories": "612c8b2b674ad2107eb2d244",
+                    "subcate": "616e81dba17386218e27a2b5",
+                    "shop": "6196377900622d794418644b",
+                    "price": "3,490 ",
+                    "sale_title": "3,490 ",
+                    "sale_price": "2,443",
+                    "description": "men shirt",
+                    "colors": "Red",
+                    "size": "S,M,X,XL",
+                    "images": [
+                        {
+                            "_id": "61963b4300622d794418687f",
+                            "filename": "images[0]-1637235522052-730096647.jpeg",
+                            "url": "https://www.jordanukshop.com/wp-content/uploads/2020/04/latest-release-nike-air-max-97-running-shoes-white-multi-color-hyper-blue-cw7013-100-1.jpeg"
+                        },
+                        {
+                            "_id": "61963c2e00622d7944187316",
+                            "filename": "images[0]-1637235757437-927339951.jpeg",
+                            "url": "https://cdn1.thecomeback.com/wp-content/uploads/2017/01/16-420_Nike_PG1_Gray_Heel-02_square_1600.jpg"
+                        },
+                        {
+                            "_id": "61963c2e00622d7944187317",
+                            "filename": "images[1]-1637235758276-122593199.jpeg",
+                            "url": "https://techprincess.it/wp-content/uploads/2020/02/nike-adapt-bb-2-0-1-scaled-e1581953777483.jpg"
+                        }
+                    ],
+                    "__v": 1,
+                    "in_wishlist": false
+                },
+                {
+                    "_id": "6197493700622d794418cdec",
+                    "on_sale": true,
+                    "sale_percent": 10,
+                    "sold": 8,
+                    "slider_new": false,
+                    "slider_recent": false,
+                    "slider_sold": false,
+                    "date": "2021-11-18T09:03:04.358Z",
+                    "title": "Printed Hoodie Grey",
+                    "categories": "616e8081a17386218e27a206",
+                    "subcate": "616e84b2a17386218e27a420",
+                    "shop": "6196377900622d794418644b",
+                    "price": "3,590 ",
+                    "sale_title": "3,590 ",
+                    "sale_price": "2,513",
+                    "description": "ssss",
+                    "colors": "#CD5C5C",
+                    "size": "S,M,L,XL,XXL",
+                    "images": [
+                        {
+                            "_id": "6197493700622d794418cded",
+                            "filename": "images[0]-1637304627221-448731879.jpeg",
+                            "url": "https://www.jordanshoes2019.net/wp-content/uploads/2018/06/Latest-Air-Jordan-32-Low-UNC-University-Blue-White-Mens-Basketball-Shoes.jpeg"
+                        },
+                        {
+                            "_id": "6197493700622d794418cdee",
+                            "filename": "images[1]-1637304628418-102234457.jpeg",
+                            "url": "https://static01.nyt.com/images/2021/04/08/us/08xpsatan-shoe/merlin_186039729_cdb846bf-dc3f-49cf-8552-e3992140338b-videoSixteenByNineJumbo1600.jpg"
+                        },
+                        {
+                            "_id": "6197493700622d794418cdef",
+                            "filename": "images[2]-1637304629564-380376274.jpeg",
+                            "url": "https://i5.walmartimages.com/asr/7efd4028-11ec-4de5-ae68-0fd7a28866c3_1.941dbe7e050d0525b49de977c028d172.jpeg"
+                        }
+                    ],
+                    "__v": 0,
+                    "in_wishlist": false
+                }
+            ]
+        }
+   ]
+}
