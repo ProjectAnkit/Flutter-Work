@@ -148,3 +148,79 @@ class _ItemContainerState extends State<ItemContainer> {
   );
   }
 }
+
+
+
+//AllProductsPage
+
+import 'package:ecommerce_app/ProductPage/ProductPage.dart';
+import 'package:flutter/material.dart';
+import 'package:google_fonts/google_fonts.dart';
+
+class AllProducts extends StatefulWidget {
+  const AllProducts({super.key, required this.Product});
+  final String Product;
+
+  @override
+  State<AllProducts> createState() => _AllProductsState();
+}
+
+class _AllProductsState extends State<AllProducts> {
+  @override
+  Widget build(BuildContext context) {
+    return Scaffold(
+      appBar: AppBar(
+        backgroundColor: Colors.deepPurple,
+        title: Text("ProductPage",style: GoogleFonts.poppins(),),
+        centerTitle: true,
+      ),
+      body: Column(
+        children: [
+          Expanded(
+            child: GridView.builder(    
+              scrollDirection: Axis.vertical,
+              itemCount: 1,    
+              gridDelegate: const SliverGridDelegateWithFixedCrossAxisCount(crossAxisCount: 2,mainAxisExtent: 320), 
+              itemBuilder: (context,index){
+                  return Padding(
+                    padding: const EdgeInsets.symmetric(horizontal: 14.0, vertical: 6),
+                    child: InkWell(
+                      onTap: (){
+                        Navigator.push(context, MaterialPageRoute(builder: (context)=> ProductPage(tag: "checkshirt",)));
+                      },
+                      child: Column(
+                        children: [
+                          Container(
+                            height: 220,
+                            decoration: BoxDecoration(border: Border.all(color: Colors.grey.shade300),borderRadius: BorderRadius.circular(10)),
+                            child:  const Center(
+                              child: Padding(
+                                padding: EdgeInsets.all(8.0),
+                                child: Hero(
+                                  tag: "checkshirt",
+                                  child: Image(image: AssetImage("assets/Products/checkshirt.png"))),
+                              ),
+                            ),
+                          ),
+                    
+                    
+                          const SizedBox(
+                            height: 5,
+                          ),
+                    
+                          ListTile(
+                            title: Text("Product 01",style: GoogleFonts.poppins(),),
+                            subtitle: Text("Product description",style: GoogleFonts.poppins(),overflow: TextOverflow.ellipsis),
+                            trailing: Text("999",style: GoogleFonts.poppins(color: Colors.black),),
+                          )
+                        ],
+                      ),
+                    ),
+                  );
+              }),
+          ),
+        ],
+      ),
+    );
+  }
+}
